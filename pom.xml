@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.unister.semweb</groupId>
+    <artifactId>QRToolNED</artifactId>
+    <version>1.0.0 </version>
+    <packaging>war</packaging>
+    <name>QRToolNED</name>
+    <description>Quality Rater Tool for Named Entity Disambiguation</description>
+    <!-- ORGANIZATION -->
+    <organization>
+        <name>Unister GmbH</name>
+        <url>http://www.unister.de</url>
+    </organization>
+    <!-- DEVELOPERS -->
+    <developers>
+        <developer>
+            <id>r.usbeck</id>
+            <name>Ricardo Usbeck</name>
+            <email>ricardo.usbeck@unister-gmbh.de</email>
+            <organization>Unister GmbH</organization>
+            <organizationUrl>http://www.unister.de</organizationUrl>
+        </developer>
+        <developer>
+            <id>d.cherix</id>
+            <name>Didier Cherix</name>
+            <email>didier.cherix@unister-gmbh.de</email>
+            <organization>Unister GmbH</organization>
+            <organizationUrl>http://www.unister.de</organizationUrl>
+        </developer>
+        <developer>
+            <id>m.roeder</id>
+            <name>Michael Roeder</name>
+            <email>michael.roeder@unister-gmbh.de</email>
+            <organization>Unister GmbH</organization>
+            <organizationUrl>http://www.unister.de</organizationUrl>
+        </developer>
+
+    </developers>
+    <!-- PROPERTIES -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <org.springframework.version>3.1.1.RELEASE</org.springframework.version>
+        <mavenVersion>4.0</mavenVersion>
+        <slf4j.version>1.6.6</slf4j.version>
+    </properties>
+    <prerequisites>
+        <maven>${maven.version}</maven>
+    </prerequisites>
+    <repositories>
+        <repository>
+            <id>aduna</id>
+            <name>Aduna Software</name>
+            <url>http://repo.aduna-software.org/maven2/releases/</url>
+        </repository>
+        <repository>
+            <id>eclipse</id>
+            <name>Eclipse Maven Repository</name>
+            <url>http://maven.eclipse.org/nexus/content/groups/maven-central</url>
+        </repository>
+        <!-- <repository>
+            <id>unister Nexus</id>
+            <url>http://nexus.aws.semweb.unister.de/content/groups/public/</url>
+            </repository> -->
+    </repositories>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+                <version>2.0.2</version>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <!-- ~~~~~~~~~~~~~~~~~~~ Spring ~~~~~~~~~~~~~~~~~~~~~~ -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-openid</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <!-- ~~~~~~~~~~~~~~~~~~~ End Spring ~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Servlet -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!-- ~~~~~~~~~~~~~~~~~~~ Logging ~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- slf4j: Logging API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <!-- slf4j: Logging Binding -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <!-- ~~~~~~~~~~~~~~~~~~~ End Logging ~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~~~~~~~~~~~~~~~~~~~ DB ~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- Commons DBCP -->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <!-- MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.21</version>
+        </dependency>
+        <!-- C3P0 -->
+        <dependency>
+            <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.1.2</version>
+        </dependency>
+        <!-- ~~~~~~~~~~~~~~~~~~~ End DB ~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- datatypes for annotated texts -->
+        <dependency>
+            <groupId>com.unister.semweb</groupId>
+            <artifactId>QRToolNED.datatypes</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
+</project>

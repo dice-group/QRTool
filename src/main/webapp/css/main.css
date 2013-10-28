@@ -1,0 +1,181 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+
+* {
+	-webkit-user-select: none; /* Chrome/Safari */
+	-moz-user-select: -moz-none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+
+	font-family: 'Libre Baskerville', Verdana, sans-serif;
+}
+
+body {
+	background-color: #eee;
+	margin: 0px;
+	padding: 0px;
+}
+
+h1 {
+	font-family: 'Lobster', cursive;
+	width: 100%;
+	text-align: center;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	color: #ccc;
+	height: 1px;
+	width: 75%;
+}
+
+label {
+	cursor: pointer;
+}
+
+textarea {
+	border: 1px #666 solid;
+	width: 100%;
+	height: 50px;
+	-webkit-user-select: auto; /* Chrome/Safari */
+	-moz-user-select: text; /* Firefox */
+	-ms-user-select: auto; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: auto;
+	user-select: auto;
+}
+
+#footer {
+	background-color: #fff;
+	border-top: 1px #666 solid;
+	float: left;
+	padding: 20px 0;
+	text-align: center;
+	width: 100%;
+}
+
+#left-sidebar {
+	width: 45%;
+	float: left;
+}
+
+#main-content {
+	width: 30%;
+	float: left;
+}
+
+#outerContainer {
+	float: left;
+	width: 100%;
+}
+
+#right-sidebar {
+	width: 25%;
+	float: left;
+}
+
+#sidebar-content {
+	-webkit-user-select: auto; /* Chrome/Safari */
+	-moz-user-select: text; /* Firefox */
+	-ms-user-select: auto; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: auto;
+	user-select: auto;
+
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+#sidebar-content span {
+	-webkit-user-select: auto; /* Chrome/Safari */
+	-moz-user-select: auto; /* Firefox */
+	-ms-user-select: auto; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: auto;
+	user-select: auto;
+
+	cursor: pointer;
+}
+
+#title {
+	float: left;
+	height: 100px;
+	width: 100%;
+}
+
+.buttonContainer {
+	padding-bottom: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.entityDesc {
+	margin-top: 5px;
+}
+
+.innerContainer {
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+
+	background-color: #fff;
+	border: 1px #eee solid;
+	font-size: 10pt;
+	height: auto;
+	margin: 20px;
+	overflow: auto;
+	padding: 10px;
+	width: auto;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.items {
+	display: none;
+}
+.selectable {
+	-webkit-user-select: auto; /* Chrome/Safari */
+	-moz-user-select: text; /* Firefox */
+	-ms-user-select: auto; /* IE10+ */
+
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: auto;
+	user-select: auto;
+}
+.subtitle {
+	font-family: 'Lobster', cursive;
+	width: 100%;
+	text-align: center;
+}
+
+.ui-icon-circle-close {
+	cursor: pointer;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+
+span.multiple_candidate_label {
+	color: #000000;
+	background-color: #FFDD00;
+}
+span.single_candidate_label {
+	color: #000000;
+	background-color: lightgreen;
+}
+span.no_candidates_label {
+	color: #000000;
+	background-color: #FF6A6A;
+}
+span.user_decided {
+	color: #000000;
+	background-color: lightblue;
+}
